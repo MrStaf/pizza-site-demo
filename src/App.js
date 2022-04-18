@@ -1,9 +1,10 @@
 import "./App.css";
 
-const Pizza = ({ img, title, price }) => {
+const Pizza = ({ img, title, price, desc }) => {
   return (
-    <div>
+    <div className="pizza">
       <img src={img} alt={title} />
+      <div>{desc}</div>
       <div className="px-3 py-2 text-lg bg-gray-700">
         <div className="font-bold uppercase">{title}</div>
         <div className="text-orange-400 ">{price}</div>
@@ -193,7 +194,7 @@ function App() {
           <Header>Pizzas Classiques</Header>
           <div className="grid grid-cols-3 gap-8">
             {pizzas.map((itm) => {
-              return <Pizza key={`pizz-${itm.id}`} img={itm.img} title={itm.title} price={itm.price} />;
+              return <Pizza key={`pizz-${itm.id}`} img={itm.img} title={itm.title} price={itm.price} desc={itm.desc} />;
             })}
           </div>
         </section>
@@ -206,6 +207,13 @@ function App() {
           </div>
         </section>
       </main>
+      <footer className="flex justify-center w-full px-4 pb-16 mt-16 bg-gray-900">
+        <div className="w-full max-w-4xl">
+          <Header>Contact</Header>
+          <div>Adress Line 1</div>
+          <div>Phone number</div>
+        </div>
+      </footer>
     </div>
   );
 }
