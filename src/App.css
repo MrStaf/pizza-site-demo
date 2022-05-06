@@ -21,3 +21,26 @@
   color: #61dafb;
 }
 
+.container-pizza {
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-in;
+
+}
+
+.container-pizza:hover {
+  transform: rotateY(180deg);
+}
+
+.image-pizza {
+  backface-visibility: hidden;
+}
+
+.desc-pizza {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.footer {
+  background-image: url("../public/maps.png");
+  background-position: center;
+}
