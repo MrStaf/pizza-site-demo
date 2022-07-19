@@ -55,7 +55,7 @@ function App() {
               <Header>Pizzas Classiques</Header>
               <div className="grid gap-8 mx-4 sm:grid-cols-2 md:grid-cols-3 lg:mx-0">
                 {pizzasList?.map((itm) => {
-                  return <Pizza key={`pizz-${itm.id}`} img={process.env.REACT_APP_DIRECTUS_URL + "/assets/" + itm.img} title={itm.title} price={itm.price} desc={itm.desc} />;
+                  return <Pizza key={`pizz-${itm.id}`} img={itm.img} title={itm.title} price={itm.price} desc={itm.desc} />;
                 })}
               </div>
             </section>
